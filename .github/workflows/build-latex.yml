@@ -23,7 +23,8 @@ jobs:
             texlive-latex-base \
             texlive-latex-recommended \
             texlive-fonts-extra \
-            texlive-lang-european
+            texlive-lang-european \
+            texlive-science \
 
       # Compile paper
       - name: Compile paper
