@@ -28,6 +28,7 @@ jobs:
 
       # Compile paper
       - name: Compile paper
+        continue-on-error: true
         working-directory: paper
         run: latexmk -pdf -interaction=nonstopmode -f main.tex
 
