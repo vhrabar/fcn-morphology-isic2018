@@ -1,0 +1,41 @@
+[project]
+name = "fcn-morphology-isic2018"
+version = "0.0.1"
+description = "FCN-based skin lesion segmentation enhanced with mathematical morphology for improved boundaries and structural accuracy on ISIC2018."
+authors = [{ name = "Luka Čečura" }, { name = "Vedran Hrabar" }, { name = "Danijel Hukić" }, { name = "Ante Juričić" }, { name = "Roko Markov" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.blackl]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+select = ["E", "F", "W", "I", "N", "B", "UP"]
+ignore = ["E501"]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "build",
+    "dist"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+ignore_missing_imports = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
