@@ -6,7 +6,21 @@ authors = [{ name = "Luka Čečura" }, { name = "Vedran Hrabar" }, { name = "Dan
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "matplotlib",
+    "opencv-python"
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+default = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
 
 [tool.blackl]
 line-length = 120
